@@ -31,7 +31,7 @@ p{
 
 /************ App *********/
 .App {
-  text-align: center;
+  /*text-align: center;*/
   position:relative;
 }
 
@@ -100,9 +100,8 @@ footer{
 	display: grid;
 	grid-template-columns:minmax(350px, 700px);
 	justify-content: center;
-	/*background: #fafafa;*/
-
 }
+
 .signup-container h2{
 	font-size: 3rem;
 	font-weight: 300;
@@ -203,7 +202,89 @@ footer{
 	margin-top: 1rem;
 }
 /************ Welcome *********/
+.welcome-container{
+	display: grid;
+	grid-template-columns:minmax(350px, 800px);
+	justify-content: center;
+}
+.welcome-container h2{
+	font-size: 3rem;
+	font-weight: 300;
+	margin: 1rem;
+	justify-self:center;
+}
 
+.investor-consent{
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns:minmax(250px, 600px);
+	justify-self:center;
+	margin-top: 1.5rem;
+	font-size: 0.9rem;
+}
+
+.investorTypes{
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.investor-types-container p{
+	text-align: left;
+	margin: 2rem 0;
+}
+
+.investorTypes [type="radio"]{
+	visibility:hidden;
+}
+.investorTypes li{
+	border: 1px solid silver;
+	border-radius: 7px;	
+	padding: 1rem;
+	flex-basis: 12rem;
+	text-align: center;
+}
+
+.investorTypes label{
+	text-align: center;
+}
+
+.investorTypes input:checked .investorTypes li{
+	background: #eee;
+}
+
+.accreditedCheck{
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.accreditedCheck [type="radio"]{
+	margin: 1rem;
+}
+
+.investor-consent-check{
+	padding: 1rem;
+	background-color: #EEF7FC;
+	width: 100%;
+}
+.investor-consent-check p{
+	margin-left: 2.5rem;
+}
+
+.survey{
+	padding: 1rem;
+	color: #fff;
+	font-size: 1.5rem;
+	border: none;
+	border-radius: 2rem;
+	width: 80%;
+	justify-self: center;
+	margin: 1rem 0 2.3rem 0;
+	background-color: var(--yellow);
+}
 /************ Questions1 *********/
 
 /************ Questions2 *********/
