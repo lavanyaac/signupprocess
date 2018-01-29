@@ -31,3 +31,74 @@ img {
 }
 
 /************ Header *********/
+
+.header-container{
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 1fr 1fr;
+	border-bottom: 1px solid var(--fontgrey);
+	padding: 1rem 5rem;
+}
+
+.header-container .nav{
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.header-container .nav a{
+	text-decoration: none;
+	color: var(--fontgrey);
+	text-transform: capitalize;
+	font-size: 0.95rem;
+}
+
+.logo{
+	justify-self: start;
+	margin-left: 4rem;
+}
+
+.signuplink{
+	border: 3px solid var(--yellow);
+	padding:0.4rem 0.6rem;
+}
+
+/************ Footer *********/
+
+footer{
+	background-color: var(--footergrey);
+	font-size: 0.6rem;
+	padding: 0.4rem 15rem;
+	color: #fff;
+	text-align: justify;
+/*	position: fixed;
+	bottom: 0;
+	left:0;*/
+	width: 100%;
+}
+
+.footer-links{
+	display: flex;
+	justify-content: flex-end;
+}
+.footer-links i{
+	font-size: 1.5rem;
+	margin-left: 0.8rem;
+}
+.footer-copyright{
+	text-align: right;
+}
+
+/************ Main *********/
+
+/************ Sign Up *********/
+
+/************ Welcome *********/
+
+/************ Questions1 *********/
+
+/************ Questions2 *********/
+
+
+
+
