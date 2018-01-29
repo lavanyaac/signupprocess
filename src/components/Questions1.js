@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import CheckBox from './util/CheckBox';
 import { questions1text } from './config/text';
 import update from 'immutability-helper';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import ProgressBar from './util/ProgressBar';
+import RangeSlider from './util/RangeSlider';
+
 
 class Questions1 extends Component {
 	constructor(props){
@@ -30,7 +33,6 @@ class Questions1 extends Component {
 				{name: 'Chemicals', checked: false},
 				{name: 'Space Exploration', checked: false}
 			]
-			
 		}
 		this.checkboxOnSelect = this.checkboxOnSelect.bind(this);
 	}
@@ -55,13 +57,14 @@ class Questions1 extends Component {
 	}
 
 	continueClick(history){
-		history.push('/questions2');
+		history.push('/questionnarie/questions2');
 	}
 
   render() {
   	const { technologiesInterested, sectorsInterested} = this.state;
     return (
       <div className="questions1-container">
+      	<ProgressBar total={this.props.totalquestions} completed={1}/>
       	<h2>We have a few questions to personlize your experience.</h2>
 
       	<div className="technologies-interested">
@@ -89,6 +92,7 @@ class Questions1 extends Component {
 
       	<div className="angel-investments">
       		<p className="question">{questions1text.question3}</p>
+      		<RangeSlider min={1} max={100} completed={1}/>
       	</div>
 
       	<button className="btn continue" 

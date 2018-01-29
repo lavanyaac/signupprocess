@@ -22,7 +22,6 @@ class WelcomePage extends Component {
 	}
 
 	radioButtonOnSelect(selectedId){
-		console.log('radio on click', selectedId)
 		this.setState({selected: selectedId});
 	}
 
@@ -38,8 +37,18 @@ class WelcomePage extends Component {
 	}
 
 	surveyClick(history){
-		history.push('/questions1');
+		history.push('/questionnarie/questions1');
 	}
+
+	// updateProgress(completed){
+	// 	const newState = update(this.state, {
+	// 			progress: { 
+	// 				completed: {$set: completed}
+	// 			}
+	// 		}
+	// 	});
+	// 	this.setState(newState);
+	// }
   render() {
   	const isAccSelected = this.state.accreditedInvestor[0].checked ? this.state.accreditedInvestor[0].id: '';
   	const {investorTypes, accreditedInvestor, selected } = this.state;

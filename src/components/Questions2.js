@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import CheckBoxAsToggleSwitch from './util/CheckBoxAsToggleSwitch';
 import { questions2text } from './config/text';
 import update from 'immutability-helper';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import ProgressBar from './util/ProgressBar';
+
 
 class Questions2 extends Component {
   constructor(props){
@@ -37,7 +39,7 @@ class Questions2 extends Component {
   	const { agreements } = this.state;
     return (
       <div className="agreements-container">
-
+      	<ProgressBar total={this.props.totalquestions} completed={2}/>
     		<ul>
     		{
     			agreements.map((agreement, i) => <li className='agreement-list'>
@@ -49,7 +51,7 @@ class Questions2 extends Component {
     		</ul>
 
       	<button className="btn finish" 
-	      	onClick={() => this.continueClick(this.props.history)}>Finsh & Browse Deals</button>
+	      	onClick={() => this.continueClick(this.props.history)}>Finish & Browse Deals</button>
       </div>
     );
   }
