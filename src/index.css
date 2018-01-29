@@ -1,5 +1,33 @@
+/************ General Settings *********/
+:root {
+  --yellow: #F0BF4B;
+  --fontgrey: #484761;
+  --footergrey:#808896;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.618;
+  font-family: 'Roboto', sans-serif;
+  color: var(--fontgrey);
 }
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+/************ App *********/
+.App {
+  text-align: center;
+  position:relative;
+}
+
+/************ Header *********/
