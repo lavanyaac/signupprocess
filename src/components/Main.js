@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom';
 import Signup from './Signup';
 import Welcome from './Welcome';
-// import Questions1 from './Questions1';
-// import Questions2 from './Questions2';
 import Questionnarie from './Questionnarie';
 import Completed from './Completed';
 

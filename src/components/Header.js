@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <header className="header-container">
-        <a href="#" className="logo">
+        <a href="#" className="logo" onClick={this.props.homeHandler}>
           <img src={logo} alt="Proplex Logo"/>
         </a>
         <ul className="nav">

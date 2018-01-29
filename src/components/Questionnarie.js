@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom';
 import Questions1 from './Questions1';
 import Questions2 from './Questions2';
-import ProgressBar from './util/ProgressBar';
 import update from 'immutability-helper';
 
 

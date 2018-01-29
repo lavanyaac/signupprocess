@@ -40,15 +40,6 @@ class WelcomePage extends Component {
 		history.push('/questionnarie/questions1');
 	}
 
-	// updateProgress(completed){
-	// 	const newState = update(this.state, {
-	// 			progress: { 
-	// 				completed: {$set: completed}
-	// 			}
-	// 		}
-	// 	});
-	// 	this.setState(newState);
-	// }
   render() {
   	const isAccSelected = this.state.accreditedInvestor[0].checked ? this.state.accreditedInvestor[0].id: '';
   	const {investorTypes, accreditedInvestor, selected } = this.state;

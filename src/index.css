@@ -1,9 +1,11 @@
 /************ General Settings *********/
 :root {
   --yellow: #F0BF4B;
+  --hoveryellow: #E1AB3B;
   --fontgrey: #484761;
   --footergrey:#808896;
   --linkedinBlue: #367BAF;
+  --linkedinhover: #4091CF;
   --widgetsBlue: #4FA9C4;
 }
 
@@ -32,7 +34,6 @@ p{
 
 /************ App *********/
 .App {
-  /*text-align: center;*/
   position:relative;
 }
 
@@ -260,14 +261,8 @@ footer{
 
 .investorTypes label{
 	text-align: center;
-	/*border: 1px solid silver;*/
-	/*border-radius: 7px;	
-	padding: 2rem;*/
 }
 
-/*.investorTypes input:checked + label{
-	background: #eee;
-}*/
 .investorTypes .active{
 	background: #eee;
 }
@@ -531,4 +526,30 @@ input:focus + .switch{
     border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
+}
+/************button general setting **********/
+.btn{
+	cursor: pointer;
+}
+.btn:hover:not(.linkedinbtn){
+	background-color: var(--hoveryellow);
+	transition: 0.2s all ease-in-out;
+}
+
+.linkedin:hover{
+	background-color: var(--linkedinhover);
+	transition: 0.2s all ease-in-out;
+}
+/************completed **********/
+.completed{
+	width: 100%;
+	height: 75vh;
+	display: flex;
+	justify-content: center;
+}
+.completed h2{
+	font-size: 3rem;
+	font-weight: 300;
+	margin: 1rem;
+	justify-self: center;
 }
