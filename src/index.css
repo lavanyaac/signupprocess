@@ -4,6 +4,7 @@
   --fontgrey: #484761;
   --footergrey:#808896;
   --linkedinBlue: #367BAF;
+  --widgetsBlue: #4FA9C4;
 }
 
 body {
@@ -204,6 +205,12 @@ footer{
 	margin-bottom: 1rem;
 	margin-top: 1rem;
 }
+
+.validation-error{
+	font-size: 0.9rem;
+	color: red;
+	margin: 0.5rem 0;
+}
 /************ Welcome *********/
 .welcome-container{
 	display: grid;
@@ -362,7 +369,77 @@ footer{
 	background-color: var(--yellow);
 }
 /************ Questions2 *********/
+.agreements-container{
+	display: grid;
+	grid-template-columns:minmax(350px, 1200px);
+	justify-content: center;
+	grid-gap: 2rem;
+}
+.agreements-container li{
+	list-style: none;
+}
+.agreement-list{
+	display: flex;
+	justify-content: flex-start;
+	margin: 4rem 1rem;
+}
+.agreements-container p{
+	margin: 0 5rem;
+	font-size: 1.2rem;
+	flex-shrink: 3;
+}
 
-
+.finish{
+	padding: 1rem;
+	color: #fff;
+	font-size: 1.5rem;
+	border: none;
+	border-radius: 2rem;
+	width: 30%;
+	justify-self: center;
+	margin: 1rem 0 2.3rem 0;
+	background-color: var(--yellow);
+}
+/************** Toggle Swtich**********/
+.toggleswitch-container{
+  position: relative;
+  height:34px;
+  width:65px;
+  display:inline-block;
+}
+.toggleswitch-container input{
+  display: none;
+}
+.switch{
+  position: absolute;
+  cursor: pointer;
+  background-color: #ddd;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  transition: .4s;
+  border-radius: 34px;
+}
+.switch:before{
+  position: absolute;
+  content: "";
+  height:26px;
+  width:26px;
+  left: 4px;
+  bottom:4px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%
+}
+input:checked + .switch:before{
+  transform: translateX(30px);
+}
+input:checked + .switch{
+  background-color: var(--widgetsBlue);
+}
+input:focus + .switch{
+  box-shadow: 0 0 1px #2196F3;
+}
 
 

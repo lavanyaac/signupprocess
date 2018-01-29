@@ -8,6 +8,7 @@ import { withRouter } from 'react-router-dom';
 
 const fieldValidations = [
 	ruleRunner("firstName", "First Name", required),
+	ruleRunner("lastName", "Last Name", required),
 	ruleRunner("emailAddress", "Email Address", required),
 	ruleRunner("password1", "Password", required, minLength(6)),
 	ruleRunner("password2", "Password Confirmation", mustMatch("password1", "Password")),

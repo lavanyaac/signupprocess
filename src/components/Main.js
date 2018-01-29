@@ -4,6 +4,7 @@ import Signup from './Signup';
 import Welcome from './Welcome';
 import Questions1 from './Questions1';
 import Questions2 from './Questions2';
+import Completed from './Completed';
 
 class Main extends Component {
   render() {
@@ -14,6 +15,7 @@ class Main extends Component {
       	<Route path='/welcome' component = {Welcome} />
       	<Route path='/questions1' component = {Questions1} />
       	<Route path='/questions2' component = {Questions2} />
+        <Route path='/completed' component = {Completed} />
       </Switch>
       </div>
     );

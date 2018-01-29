@@ -36,7 +36,6 @@ class Questions1 extends Component {
 	}
 
 	checkboxOnSelect(label, index, dataType){
-		console.log(label, index, dataType)
 		let stateProp;
 
 		if(dataType === 'technology'){
