@@ -106,15 +106,18 @@ footer{
 	font-size: 3rem;
 	font-weight: 300;
 	margin: 1rem;
+	justify-self: center;
 }
 
 .signup-subtext{
 	font-size: 1.3rem;
 	font-weight: 700;
+	justify-self: center;
 }
 
 .signup-text{
-	font-size: 1rem
+	font-size: 1rem;
+	justify-self: center;
 }
 
 .signup-noaccount{
@@ -245,13 +248,20 @@ footer{
 	padding: 1rem;
 	flex-basis: 12rem;
 	text-align: center;
+	cursor: pointer;
 }
 
 .investorTypes label{
 	text-align: center;
+	/*border: 1px solid silver;*/
+	/*border-radius: 7px;	
+	padding: 2rem;*/
 }
 
-.investorTypes input:checked .investorTypes li{
+/*.investorTypes input:checked + label{
+	background: #eee;
+}*/
+.investorTypes .active{
 	background: #eee;
 }
 
@@ -271,7 +281,7 @@ footer{
 	width: 100%;
 }
 .investor-consent-check p{
-	margin-left: 2.5rem;
+	margin-left: 2.6rem;
 }
 
 .survey{
@@ -329,6 +339,27 @@ footer{
 
 .technologies-interested label, .sectors-interested label{
 	margin-right: 10px;
+	cursor: pointer;
+}
+.technologies-interested .active{
+	background: #eee;
+}
+.sectors-interested label{
+	font-size: 0.8rem;
+}
+.sectors-interested .active{
+	background: #eee;
+}
+.continue{
+	padding: 1rem;
+	color: #fff;
+	font-size: 1.5rem;
+	border: none;
+	border-radius: 2rem;
+	width: 30%;
+	justify-self: center;
+	margin: 1rem 0 2.3rem 0;
+	background-color: var(--yellow);
 }
 /************ Questions2 *********/
 

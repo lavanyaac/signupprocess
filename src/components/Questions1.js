@@ -36,6 +36,7 @@ class Questions1 extends Component {
 	}
 
 	checkboxOnSelect(label, index, dataType){
+		console.log(label, index, dataType)
 		let stateProp;
 
 		if(dataType === 'technology'){
@@ -54,6 +55,10 @@ class Questions1 extends Component {
 		this.setState(newState);
 	}
 
+	continueClick(history){
+		history.push('/questions2');
+	}
+
   render() {
   	const { technologiesInterested, sectorsInterested} = this.state;
     return (
@@ -64,8 +69,10 @@ class Questions1 extends Component {
       		<p className="question">{questions1text.question1}</p>
       		<ul>
       		{
-      			technologiesInterested.map((technology, i) => <li><CheckBox label={technology.name} dataType={'technology'}
-	      			checkboxOnSelect={this.checkboxOnSelect} checked={technology.checked} key={technology.name} index={i}/></li>)
+      			technologiesInterested.map((technology, i) => <li className={technology.checked ? 'active': ''}>
+      				<CheckBox label={technology.name} dataType={'technology'} 
+	      			checkboxOnSelect={this.checkboxOnSelect} checked={technology.checked} key={technology.name} index={i}/>
+	      			</li>)
       		}
       		</ul>
       	</div>
@@ -73,8 +80,10 @@ class Questions1 extends Component {
       		<p className="question">{questions1text.question2}</p>
       		<ul>
       		{
-      			sectorsInterested.map((sector, i) => <li><CheckBox label={sector.name} dataType={'sector'}
-      			checkboxOnSelect={this.checkboxOnSelect} checked={sector.checked} key={sector.name} index={i}/></li>)
+      			sectorsInterested.map((sector, i) => <li className={sector.checked ? 'active': ''}>
+      				<CheckBox label={sector.name} dataType={'sector'}
+      			checkboxOnSelect={this.checkboxOnSelect} checked={sector.checked} key={sector.name} index={i}/>
+      			</li>)
       		}
       		</ul>
       	</div>
@@ -82,6 +91,9 @@ class Questions1 extends Component {
       	<div className="angel-investments">
       		<p className="question">{questions1text.question3}</p>
       	</div>
+
+      	<button className="btn continue" 
+	      	onClick={() => this.continueClick(this.props.history)}>Continue</button>
       </div>
     );
   }

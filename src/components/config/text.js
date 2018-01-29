@@ -43,3 +43,9 @@ export const questions1text = {
 	question2: `What sectors are you interested in?`,
 	question3: `How many angel investments have you made?`,
 };
+
+export const questions2text = {
+	agreement1: `I understand that startup investments are highly risky, illiquid, and I may not receive returns upto seven or more years.`,
+	agreement2: `I am able to evaluate merits and risks on my own.`,
+	agreement3: `I have no liquidity needs for investments made through Propel(X).`,
+};
