@@ -37,3 +37,9 @@ export const welcometext = {
 	disclaimer: `By joining, you agreeing to Propel(X)'s Terms of Use and Privacy Policy`
 
 };
+
+export const questions1text = {
+	question1: `What technologies are you interested in?`,
+	question2: `What sectors are you interested in?`,
+	question3: `How many angel investments have you made?`,
+};
