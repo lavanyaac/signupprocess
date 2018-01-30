@@ -5,7 +5,7 @@ function RadioButtonField({radioGrpName, value, id, selected,radioButtonOnSelect
 	const labelClass = checked ? 'active': '';
   return (
   	<li className={labelClass} onClick={() => radioButtonOnSelect(id)}>
-      <input type='radio' value={value} name={radioGrpName} id={id} checked={checked} />
+      <input type='radio' value={value} name={radioGrpName} id={id} checked={checked} onChange={() => {}} />
       <label htmlFor={id}>{value}</label>
     </li>
   );
