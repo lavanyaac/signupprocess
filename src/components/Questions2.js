@@ -31,10 +31,6 @@ class Questions2 extends Component {
 		this.setState(newState);
 	}
 
-	continueClick(history){
-		history.push('/completed');
-	}
-
   render() {
   	const { agreements } = this.state;
     return (
@@ -42,16 +38,16 @@ class Questions2 extends Component {
       	<ProgressBar total={this.props.totalquestions} completed={2}/>
     		<ul>
     		{
-    			agreements.map((agreement, i) => <li className='agreement-list'>
-    				<CheckBoxAsToggleSwitch label={agreement.name} dataType={'agreement'} 
-      			checkboxOnSelect={this.checkboxOnSelect} checked={agreement.checked} key={agreement+i} index={i}/>
-      			<p>{agreement.name}</p>
+    			agreements.map((agreement, i) => 
+    				<li className='agreement-list' key={agreement+i}>
+	    				<CheckBoxAsToggleSwitch label={agreement.name} dataType={'agreement'} 
+	      			checkboxOnSelect={this.checkboxOnSelect} checked={agreement.checked}  index={i}/>
+	      			<p>{agreement.name}</p>
       			</li>)
     		}
     		</ul>
 
-      	<button className="btn finish" 
-	      	onClick={() => this.continueClick(this.props.history)}>Finish & Browse Deals</button>
+      	<button className="btn finish">Finish & Browse Deals</button>
       </div>
     );
   }

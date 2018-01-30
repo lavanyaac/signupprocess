@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom';
 import ProgressBar from './util/ProgressBar';
 import RangeSlider from './util/RangeSlider';
 
-
 class Questions1 extends Component {
 	constructor(props){
 		super(props);
@@ -32,7 +31,8 @@ class Questions1 extends Component {
 				{name: 'Connected Devices', checked: false},
 				{name: 'Chemicals', checked: false},
 				{name: 'Space Exploration', checked: false}
-			]
+			],
+			noOfAngelInvestments: 1
 		}
 		this.checkboxOnSelect = this.checkboxOnSelect.bind(this);
 	}
@@ -71,9 +71,11 @@ class Questions1 extends Component {
       		<p className="question">{questions1text.question1}</p>
       		<ul>
       		{
-      			technologiesInterested.map((technology, i) => <li className={technology.checked ? 'active': ''}>
-      				<CheckBox label={technology.name} dataType={'technology'} 
-	      			checkboxOnSelect={this.checkboxOnSelect} checked={technology.checked} key={technology.name} index={i}/>
+      			technologiesInterested.map((technology, i) => 
+      				<li className={technology.checked ? 'active': ''} key={technology.name+i}
+      				onClick={()=>this.checkboxOnSelect(technology.name, i, 'technology')}>
+	      				<CheckBox label={technology.name} dataType={'technology'} 
+	      				checkboxOnSelect={this.checkboxOnSelect} checked={technology.checked}  index={i}/>
 	      			</li>)
       		}
       		</ul>
@@ -82,9 +84,11 @@ class Questions1 extends Component {
       		<p className="question">{questions1text.question2}</p>
       		<ul>
       		{
-      			sectorsInterested.map((sector, i) => <li className={sector.checked ? 'active': ''}>
-      				<CheckBox label={sector.name} dataType={'sector'}
-      			checkboxOnSelect={this.checkboxOnSelect} checked={sector.checked} key={sector.name} index={i}/>
+      			sectorsInterested.map((sector, i) => 
+      				<li className={sector.checked ? 'active': ''} key={sector.name+i}
+      				onClick={()=>this.checkboxOnSelect(sector.name, i, 'sector')}>
+	      				<CheckBox label={sector.name} dataType={'sector'}
+	      			checkboxOnSelect={this.checkboxOnSelect} checked={sector.checked} index={i}/>
       			</li>)
       		}
       		</ul>
@@ -92,7 +96,7 @@ class Questions1 extends Component {
 
       	<div className="angel-investments">
       		<p className="question">{questions1text.question3}</p>
-      		<RangeSlider min={1} max={100} completed={1}/>
+      		<RangeSlider min={0} max={15}/>
       	</div>
 
       	<button className="btn continue" 

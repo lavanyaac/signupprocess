@@ -3,7 +3,6 @@ import {Route, Switch} from 'react-router-dom';
 import Signup from './Signup';
 import Welcome from './Welcome';
 import Questionnarie from './Questionnarie';
-import Completed from './Completed';
 
 class Main extends Component {
   render() {
@@ -13,7 +12,6 @@ class Main extends Component {
       	<Route exact path='/' component = {Signup} />
       	<Route path='/welcome' component = {Welcome} />
         <Route path='/Questionnarie' component = {Questionnarie} />
-        <Route path='/completed' component = {Completed} />
       </Switch>
       </div>
     );

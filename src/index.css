@@ -96,7 +96,9 @@ footer{
 	text-align: right;
 }
 /************ Main *********/
-
+.main{
+	/*max-width: 1300px;*/
+}
 /************ Sign Up *********/
 .signup-container{
 	display: grid;
@@ -132,9 +134,8 @@ footer{
 	justify-content: center;
 	grid-gap:1rem;
 	margin-top: 0.7rem;
-
-
 }
+
 .text-field input{
 	padding: 1.3rem;
 	width: 100%;
@@ -190,7 +191,7 @@ footer{
 
 .highlight-text{
 	margin-left: 10px;
-	color: var(--linkedinBlue);
+	color: var(--widgetsBlue);
 	font-weight: 500;
 }
 
@@ -210,7 +211,7 @@ footer{
 .validation-error{
 	font-size: 0.9rem;
 	color: red;
-	margin: 0.5rem 0;
+	margin: 0.5rem;
 }
 /************ Welcome *********/
 .welcome-container{
@@ -331,7 +332,7 @@ footer{
 }
 
 .technologies-interested li, .sectors-interested li{
-	padding: 1rem 0.3rem;
+	padding: 1rem 1.3rem 1rem 0.3rem;
 	border: 1px solid silver;
 	border-radius: 7px;
 	font-size: 1rem;
@@ -340,18 +341,21 @@ footer{
 }
 
 .technologies-interested label, .sectors-interested label{
-	margin-right: 10px;
 	cursor: pointer;
 }
+
 .technologies-interested .active{
 	background: #eee;
 }
+
 .sectors-interested label{
 	font-size: 0.8rem;
 }
+
 .sectors-interested .active{
 	background: #eee;
 }
+
 .continue{
 	padding: 1rem;
 	color: #fff;
@@ -395,7 +399,7 @@ footer{
 	margin: 1rem 0 2.3rem 0;
 	background-color: var(--yellow);
 }
-/************** Toggle Swtich**********/
+/************** Toggle Switch**********/
 .toggleswitch-container{
   position: relative;
   height:34px;
@@ -448,7 +452,7 @@ input:focus + .switch{
 
 .outerbar{
   height: 7px;
-  width: 80%;
+  width: 87%;
   background-color: #eee;
   margin-right:1rem;
 }
@@ -459,73 +463,6 @@ input:focus + .switch{
   text-align: center;
   height: 100%;
   color:#fff;
-}
-/************** Range Slider *************/
-.slidecontainer {
-    width: 100%;
-}
-
-/*.slider {
-    appearance: none;
-    width: 100%; 
-    height: 5px; 
-    background: #d3d3d3; 
-    outline: none; 
-    opacity: 0.7; 
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-.slider:hover {
-    opacity: 1; 
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none; 
-    appearance: none;
-    width: 25px; 
-    height: 25px; 
-    background: transparent; 
-    cursor: pointer; 
-}
-
-.slider::-moz-range-thumb {
-    width: 25px; 
-    height: 25px; 
-    /*background: transparent;  */
-	  /*cursor: pointer; 
-	  border: 1px solid silver;
-	  border-radius: 50%;
-}*/
-
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 15px;
-    border-radius: 5px;   
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%; 
-    background: #4CAF50;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
 }
 /************button general setting **********/
 .btn{
@@ -552,4 +489,64 @@ input:focus + .switch{
 	font-weight: 300;
 	margin: 1rem;
 	justify-self: center;
+}
+
+/************ Range Slider ********/
+
+.rangeslider{
+    margin:20px 0;
+    position:relative;
+    background:#e6e6e6;
+    -ms-touch-action:none;
+    touch-action:none
+}
+.rangeslider,.rangeslider .rangeslider__fill{
+    display:block;
+}
+.rangeslider .rangeslider__handle{
+    background:#fff;
+    border:1px solid #ccc;
+    cursor:pointer;
+    display:inline-block;
+    position:absolute;
+    outline: none;
+}
+.rangeslider .rangeslider__handle .rangeslider__active{
+    opacity:1
+}
+.rangeslider-horizontal{
+    height:7px;
+}
+.rangeslider-horizontal .rangeslider__fill{
+    height:100%;
+    background-color: var(--widgetsBlue);
+    top:0;
+}
+.rangeslider-horizontal .rangeslider__handle{
+    width:30px;
+    height:30px;
+    border-radius:30px;
+    top:50%;
+    transform:translate3d(-50%,-50%,0);
+}
+.rangeslider__labels{
+    position:relative
+}
+.rangeslider-vertical .rangeslider__labels{
+    position:relative;
+    list-style-type:none;
+    margin:0 0 0 24px;
+    padding:0;
+    text-align:left;
+    width:250px;
+    height:100%;
+    left:10px;
+}
+.rangeslider__labels .rangeslider__label-item{
+    position:absolute;
+    font-size:14px;
+    cursor:pointer;
+    display:inline-block;
+    top:5px;
+    transform:translate3d(-50%,0,0)
 }

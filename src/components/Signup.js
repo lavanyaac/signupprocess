@@ -8,12 +8,12 @@ import { withRouter } from 'react-router-dom';
 
 const fieldValidations = [
 	ruleRunner("firstName", "First Name", required),
-	ruleRunner("lastName", "Last Name", required),
-	ruleRunner("emailAddress", "Email Address", required),
-	ruleRunner("password1", "Password", required, minLength(6)),
-	ruleRunner("password2", "Password Confirmation", mustMatch("password1", "Password")),
+	// ruleRunner("lastName", "Last Name", required),
+	// ruleRunner("emailAddress", "Email Address", required),
+	// ruleRunner("password1", "Password", required, minLength(6)),
+	// ruleRunner("password2", "Password Confirmation", mustMatch("password1", "Password")),
 ];
-
+//Uncomment to add more validations to the sign-up form
 
 class Signup extends Component{
 
@@ -28,12 +28,7 @@ class Signup extends Component{
 		this.state = {
 			showErrors: false,
 			validationErrors: {},
-			labelautomation: {},
-			firstName: 'hello',
-			lastName: 'ln',
-			emailAddress: 'emailAddress@gmail.com',
-			password1:'hello12',
-			password2: 'hello12'
+			labelautomation: {}
 		}
 	}
 

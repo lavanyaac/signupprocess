@@ -34,7 +34,7 @@ export const welcometext = {
 	welcomemessage:`Thank you for signing up. Your account is currently pending approval for full access to all of our
 									investment opportunities. By law, we're required to ask you a few questions. To expedite your access
 									to deals, please answer a short survey.`,
-	disclaimer: `By joining, you agreeing to Propel(X)'s Terms of Use and Privacy Policy`
+	disclaimer: `By joining, you are agreeing to Propel(X)'s Terms of Use and Privacy Policy`
 
 };
 
