@@ -28,7 +28,12 @@ class Signup extends Component{
 		this.state = {
 			showErrors: false,
 			validationErrors: {},
-			labelautomation: {}
+			labelautomation: {},
+			firstName:'',
+			lastName:'',
+			emailAddress:'',
+			password1:'',
+			password2:''
 		}
 	}
 
